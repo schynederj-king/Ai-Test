@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101326">
+  <title>AI Social Room — Gemini + ChatGPT</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="logo">✦</div>
+      <div>
+        <p class="eyebrow">YOUR TWO-AI SOCIAL SIMULATION</p>
+        <h1>AI Social Room</h1>
+        <p class="sub">One message. Two perspectives. One shared room.</p>
+      </div>
+      <span id="status" class="status">Checking connection…</span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <h2>Bring both AIs into the conversation.</h2>
+        <p>Send a message and Gemini replies first. ChatGPT then sees Gemini’s answer and adds its own perspective.</p>
+      </div>
+      <div class="orbit" aria-hidden="true"><span>G</span><i>↔</i><span>✦</span></div>
+    </section>
+
+    <section class="conversation" aria-live="polite">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">✧</div>
+        <h3>The room is ready for you</h3>
+        <p>Try: “You two are meeting for the first time. Introduce yourselves and start a friendly conversation.”</p>
+      </div>
+      <div id="messages"></div>
+    </section>
+
+    <form id="chat-form" class="composer">
+      <textarea id="message" rows="2" maxlength="5000" placeholder="Write a message for both AIs…" required></textarea>
+      <div class="composer-bottom">
+        <span>Responses use your API accounts and may incur usage charges.</span>
+        <button id="send" type="submit"><span>Send to both</span><b>↗</b></button>
+      </div>
+    </form>
+    <footer>
+      <span>Keys stay on your server — never enter them in this chat box.</span>
+      <button id="clear" class="text-button" type="button">Clear conversation</button>
+    </footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
